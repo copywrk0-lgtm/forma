@@ -227,3 +227,12 @@ body{overflow-x:clip}
 .detail-shot,.detail-shot:nth-child(2),.detail-shot:nth-child(3),.detail-shot:nth-child(4){margin:0 0 48px}
 .detail-shot figcaption{font-size:9px}
 }
+
+/* Match vertical scroll duration to actual horizontal distance */
+@media(min-width:701px) and (prefers-reduced-motion:no-preference){
+ #approach.approach-pinned{height:calc(100svh + var(--approach-travel, 1150px));min-height:0}
+}
+.contact{isolation:isolate}
+.contact:before{content:"";position:absolute;inset:0 0 0 auto;width:min(41%,570px);background:url('/images/interior-12.jpg') center/cover no-repeat;opacity:.115;mask-image:linear-gradient(90deg,transparent 0%,black 65%);pointer-events:none;z-index:-1}
+.contact .contact-reveal{position:relative}
+@media(max-width:700px){.contact:before{width:70%;opacity:.08}}
