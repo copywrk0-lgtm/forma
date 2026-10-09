@@ -74,3 +74,29 @@
 @media(max-width:900px){.intro-center{top:42%;width:85%}.intro-center h2{font-size:clamp(54px,8vw,88px)}.intro-fragment-a{left:3%;top:18%;width:20%}.intro-fragment-b{right:3%;top:18%;width:20%}.intro-fragment-c{right:3%;bottom:14%;width:25%}.intro-fragment-d{left:15%;bottom:14%;width:19%}.intro-aside-right{right:5%;top:57%}.intro-aside-left{bottom:23%}}
 @media(max-width:600px){.intro-story{height:165svh}.intro-sticky{min-height:560px}.intro-story-kicker{left:6%;right:6%;top:5%;font-size:8px}.intro-center{width:94%;top:43%}.intro-center h2{font-size:clamp(47px,12vw,72px);line-height:.94}.intro-center-label{font-size:8px}.intro-fragment-a{left:-5%;top:18%;width:35%;height:19%}.intro-fragment-b{right:-3%;top:16%;width:32%;height:18%}.intro-fragment-c{right:-7%;bottom:14%;width:44%;height:22%}.intro-fragment-d{left:-4%;bottom:11%;width:35%;height:18%}.intro-fragment figcaption{font-size:7px}.intro-aside{font-size:9px;max-width:150px}.intro-aside-left{left:6%;bottom:34%}.intro-aside-right{right:6%;top:59%;text-align:right}.intro-story-bottom{left:6%;right:6%;bottom:3%;font-size:8px;gap:20px}.intro-story-bottom a{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){.intro-story{height:auto}.intro-sticky{position:relative;height:820px}.intro-fragment{will-change:auto}}
+
+/* Studio composition hardening — prevent inherited image/figure rules from breaking layout */
+#studio.intro-story{display:block!important;position:relative!important;height:175svh!important;min-height:950px;overflow:clip;background:#eeece6}
+#studio .intro-sticky{display:block!important;position:sticky!important;top:0!important;height:100svh!important;min-height:0!important;overflow:hidden!important;contain:layout paint;isolation:isolate}
+#studio .intro-center{position:absolute!important;left:50%!important;top:47%!important;width:min(66vw,900px)!important;max-width:900px!important;translate:-50% -50%;text-align:center;z-index:8!important}
+#studio .intro-center h2{font-family:'Instrument Serif',Georgia,serif!important;font-size:clamp(54px,6.7vw,112px)!important;line-height:.93!important;font-weight:400!important;letter-spacing:-.045em!important;margin:19px 0!important}
+#studio .intro-fragment{display:block!important;position:absolute!important;inset:auto!important;max-width:none!important;min-width:0!important;margin:0!important;overflow:visible!important;z-index:4!important}
+#studio .intro-fragment img{display:block!important;position:relative!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:cover!important;border:0!important}
+#studio .intro-fragment-a{left:5%!important;top:19%!important;width:clamp(125px,15vw,235px)!important;height:clamp(155px,25vh,260px)!important}
+#studio .intro-fragment-b{right:5%!important;top:12%!important;width:clamp(130px,17vw,260px)!important;height:clamp(135px,21vh,225px)!important}
+#studio .intro-fragment-c{right:4%!important;bottom:11%!important;width:clamp(160px,20vw,320px)!important;height:clamp(165px,28vh,300px)!important}
+#studio .intro-fragment-d{left:16%!important;bottom:10%!important;width:clamp(120px,14vw,230px)!important;height:clamp(130px,19vh,210px)!important}
+#studio .intro-aside{z-index:6!important}
+#studio .intro-story-kicker,#studio .intro-story-bottom{z-index:10!important}
+@media(max-width:700px){
+#studio.intro-story{height:145svh!important;min-height:760px}
+#studio .intro-center{width:94vw!important;top:46%!important}
+#studio .intro-center h2{font-size:clamp(43px,10.9vw,72px)!important;line-height:1!important}
+#studio .intro-fragment-a{left:-3%!important;top:17%!important;width:30vw!important;height:16vh!important}
+#studio .intro-fragment-b{right:-4%!important;top:14%!important;width:29vw!important;height:15vh!important}
+#studio .intro-fragment-c{right:-4%!important;bottom:13%!important;width:34vw!important;height:20vh!important}
+#studio .intro-fragment-d{left:-2%!important;bottom:15%!important;width:29vw!important;height:15vh!important}
+#studio .intro-aside{display:none!important}
+#studio .intro-story-bottom{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){#studio.intro-story{height:100svh!important;min-height:620px!important}#studio .intro-sticky{position:relative!important}}
