@@ -55,7 +55,7 @@
 .intro-story{height:190vh;background:#f2f0e8;position:relative;color:#22231f}
 .intro-sticky{height:100svh;min-height:640px;position:sticky;top:0;overflow:hidden;isolation:isolate}
 .intro-story-kicker{position:absolute;top:6%;left:5%;right:5%;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.14em;font-weight:600;z-index:5}
-.intro-center{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%)!important;text-align:center;width:min(70%,870px);z-index:3;pointer-events:none}
+.intro-center{position:absolute;left:50%;top:43%;translate:-50% -50%;text-align:center;width:min(70%,870px);z-index:3;pointer-events:none}
 .intro-center-label{font-size:10px;letter-spacing:.19em}
 .intro-center h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(56px,6.8vw,115px);line-height:.92;letter-spacing:-.045em;margin:20px 0 14px}
 .intro-center h2 em{font-weight:400}
